@@ -23,7 +23,7 @@ $(OBJ_DIR)/%.o: $(SRC_DIR)/%.cpp $(DEPS)
 
 # Links and compiles all the object files into executable
 $(TARGET): $(OBJS)
-	$(CC) -o $@ $(OBJS) $(CFLAGS) $(LIBS)
+	$(CC) -o $@ $(OBJS) $(CFLAGS) $(LIBS) -static
 
 all: $(TARGET)
 
