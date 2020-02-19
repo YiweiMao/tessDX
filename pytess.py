@@ -13,7 +13,12 @@ Requires the cpp code to be compiled first
 Usage:
 from pytess import *
 
+# show one instance of tessellation, len(tfs)==2 is isoline, ==4 is triangle, ==6 is quad
 Tessellator(partition=PART_INT,outputPrim=OUTPUT_TRIANGLE_CW,tfs=[1,2,3,4]).doTess()
+
+# or if you want interactivity
+interact(showTess,partition=(0,3,1),outputPrim=(0,3,1),outTF0=(1,64,0.1),outTF1=(-1,64,0.1),
+                 outTF2=(-1,64,0.01),outTF3=(-1,64,0.1),inTF0=(1,64,0.1),inTF1=(-1,64,0.1))
 '''
 
 PART_INT = 0
@@ -82,7 +87,7 @@ class Tessellator():
         self.indexes = np.array(self.indexes)
 
         if len(self.tfs)==4:
-            self.points = bary2cart(self.points)
+            self.points = self.bary2cart(self.points)
         
         # plot the generated primitives
         if show:
