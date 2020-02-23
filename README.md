@@ -6,10 +6,13 @@ tessellation playground for the [DX11 tessellation spec](https://github.com/micr
 git clone https://github.com/YiweiMao/tessDX
 cd tessDX/
 make
-python
 ```
+
 ```python
 from pytess import *
+%matplotlib inline
+# if not using jupyter notebook, add this at the end of the script: plt.show()
+
 # for one instance of tessellation
 Tessellator(partition=PART_INT,outputPrim=OUTPUT_TRIANGLE_CW,tfs=[1,2,3,4]).doTess()
 
