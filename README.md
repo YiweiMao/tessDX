@@ -1,6 +1,8 @@
 # tessDX
 tessellation playground for the [DX11 tessellation spec](https://github.com/microsoft/DirectX-Specs/blob/master/d3d/archive/images/d3d11)
 
+[Blog post on Tessellation](https://yiweimao.github.io/2020/02/26/introduction_to_tessellation.html)
+
 # example usage
 ```bash
 git clone https://github.com/YiweiMao/tessDX
